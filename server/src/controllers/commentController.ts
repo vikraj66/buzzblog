@@ -3,18 +3,19 @@ import prisma from '../utils/connect';
 import * as http from 'http';
 import { AuthMiddleware } from '../middleware/authMiddleware';
 import { sessionMiddleware } from '../middleware/sessionMiddleware';
+import { parse } from 'url';
 
 @Controller('/comments')
 export class CommentController {
   @Route('get', '/')
   async getAllComments(req: http.IncomingMessage, res: http.ServerResponse) {
-    const { searchParams } = new URL(req.url as string, `http://${req.headers.host}`);
-    const postSlug = searchParams.get('postSlug');
+    const queryObject = parse(req.url || '', true).query;
+    const slug = queryObject.slug as string;
 
     try {
       const comments = await prisma.comment.findMany({
         where: {
-          ...(postSlug && { postSlug }),
+          ...(slug && { postSlug:slug }),
         },
         include: { user: true },
       });
