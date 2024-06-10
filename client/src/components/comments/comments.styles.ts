@@ -1,0 +1,71 @@
+export const commentStyles = `
+    .container {
+        margin-top: 50px;
+    }
+    .title {
+        color: var(--softTextColor);
+        margin-bottom: 30px;
+    }
+    .write {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .input {
+        padding: 20px;
+        width: 100%;
+    }
+    .button {
+        padding: 16px 20px;
+        background-color: teal;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .comments {
+        margin-top: 50px;
+    }
+    .comment {
+        margin-bottom: 50px;
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .imageContainer {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .userInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: var(--softTextColor);
+    }
+    .username {
+        font-weight: 500;
+    }
+    .date {
+        font-size: 14px;
+    }
+    .desc {
+        font-size: 18px;
+        font-weight: 300;
+    }
+`;

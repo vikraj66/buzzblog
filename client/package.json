@@ -1,0 +1,37 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "move": "shx mkdir -p dist && (shx test -e dist/images || shx cp -r public/images dist/images)",
+    "start": "npm run move && parcel public/index.html",
+    "build:parcel": "tsc && parcel build public/index.html",
+    "clean": "shx rm -rf dist .parcel-cache",
+    "dev": "npm run move && vite",
+    "build": "npm run move && vite build",
+    "serve": "npm run move && vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/resolver-default": "^2.12.0",
+    "process": "^0.11.10",
+    "shx": "^0.3.4",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "dependencies": {
+    "@parcel/config-default": "^2.12.0",
+    "@parcel/transformer-typescript-tsc": "^2.12.0",
+    "@vitejs/plugin-legacy": "^5.4.1",
+    "@vitejs/plugin-react": "^4.3.0",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.12.2",
+    "jwt-decode": "^4.0.0",
+    "quill": "^2.0.2",
+    "vite": "^5.2.13",
+    "wayofjs": "^3.0.0"
+  }
+}

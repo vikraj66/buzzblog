@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "ESNext",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "moduleResolution": "node",
+    "plugins": [
+      {
+        "transform": "ts-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "examples",
+    "tests",
+    "src/tests"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/types/extended-http.d.ts"
+  ]
+}
