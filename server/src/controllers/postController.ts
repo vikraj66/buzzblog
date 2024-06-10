@@ -76,10 +76,8 @@ export class PostController {
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
-      console.log(body)
       try {
         const postData = JSON.parse(body);
-        console.log(postData)
         const post = await prisma.post.create({
           data: { ...postData, userEmail: session.user.email },
         });
