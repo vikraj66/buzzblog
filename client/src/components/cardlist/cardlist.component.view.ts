@@ -1,4 +1,4 @@
-import { html, View } from 'wayofjs';
+import { html, View } from 'wayofthejs';
 import { Base } from '@/models/base.model';
 import { CardView } from '@/components/card/card.component.view';
 import { cardListStyles } from './cardlist.styles';

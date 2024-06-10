@@ -1,4 +1,4 @@
-import { ApiSync, Attributes, Eventing, Model } from 'wayofjs';
+import { ApiSync, Attributes, Eventing, Model } from 'wayofthejs';
 
 export interface WriteAttributes {
     id?: number;

@@ -1,5 +1,5 @@
 import { base } from "@/props/base.props";
-import { ApiSync, Attributes, Eventing, Model } from "wayofjs";
+import { ApiSync, Attributes, Eventing, Model } from "wayofthejs";
 export class Base extends Model<base> {
     static default() {
         const attr = new Attributes<base>({ id: 1 });

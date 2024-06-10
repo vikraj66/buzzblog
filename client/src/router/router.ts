@@ -4,7 +4,7 @@ import { homepageRouteHandler } from "@/routerHandlers/homeRouterHandler";
 import { loginRouteHandler } from "@/routerHandlers/loginRouterHandler";
 import { postPageRouteHandler } from "@/routerHandlers/postRouterHandler";
 import { writeRouteHandler } from "@/routerHandlers/writeRouterHandler";
-import { Router } from 'wayofjs'
+import { Router } from 'wayofthejs'
 
 const router = new Router();
 

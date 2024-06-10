@@ -1,4 +1,4 @@
-import { App } from 'wayofnode';
+import { App } from 'wayofthenode';
 import { PostController } from './controllers/postController';
 import { CommentController } from './controllers/commentController';
 import { CategoryController } from './controllers/categoryController';

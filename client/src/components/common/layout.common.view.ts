@@ -1,6 +1,6 @@
 import { Base } from '@/models/base.model';
 import { base } from '@/props/base.props';
-import { View } from 'wayofjs';
+import { View } from 'wayofthejs';
 
 interface LayoutCommonProps {
     id: number;

@@ -1,4 +1,4 @@
-import { html, View } from 'wayofjs';
+import { html, View } from 'wayofthejs';
 import { writePageStyles } from './write.styles';
 import { WriteAttributes, WriteModel } from '@/models/write.model';
 import Quill from 'quill';

@@ -1,4 +1,4 @@
-import { Model, View } from 'wayofjs';
+import { Model, View } from 'wayofthejs';
 import { navbarStyles } from './navbar.styles';
 import { AuthLinks } from '../authlinks/authlink.component.view';
 import { Base } from '@/models/base.model';

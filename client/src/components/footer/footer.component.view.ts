@@ -1,4 +1,4 @@
-import { Model, View } from 'wayofjs';
+import { Model, View } from 'wayofthejs';
 import { footerStyles } from './footer.styles';
 import { Base } from '@/models/base.model';
 import { base } from '@/props/base.props';

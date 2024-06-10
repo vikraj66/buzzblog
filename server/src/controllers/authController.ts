@@ -1,4 +1,4 @@
-import { Controller, Route } from 'wayofnode';
+import { Controller, Route } from 'wayofthenode';
 import * as http from 'http';
 import { adminAuth } from '../config/firebaseAdmin';
 import { serialize } from 'cookie';

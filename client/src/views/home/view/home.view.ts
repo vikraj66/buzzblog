@@ -1,4 +1,4 @@
-import { html, View } from 'wayofjs';
+import { html, View } from 'wayofthejs';
 import { Base } from '@/models/base.model';
 import { FeaturedView } from '@/components/featured/featured.component.view';
 // import { CardListView } from '@/components/cardList/cardList.view';

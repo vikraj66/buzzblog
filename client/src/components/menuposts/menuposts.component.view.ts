@@ -1,4 +1,4 @@
-import { html, View } from 'wayofjs';
+import { html, View } from 'wayofthejs';
 import { Base } from '@/models/base.model';
 import { mockData } from '../cardlist/mockData';
 import { menuPostsStyles } from './menuposts.styles';

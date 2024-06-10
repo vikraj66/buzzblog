@@ -18,10 +18,18 @@
   "description": "",
   "devDependencies": {
     "@parcel/resolver-default": "^2.12.0",
+    "assert": "^2.1.0",
+    "browserify-zlib": "^0.2.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.12.0",
     "process": "^0.11.10",
     "shx": "^0.3.4",
-    "tsconfig-paths": "^4.2.0"
+    "stream-browserify": "^3.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tty-browserify": "^0.0.1",
+    "util": "^0.12.5"
   },
   "dependencies": {
     "@parcel/config-default": "^2.12.0",
@@ -33,6 +41,6 @@
     "jwt-decode": "^4.0.0",
     "quill": "^2.0.2",
     "vite": "^5.2.13",
-    "wayofjs": "^3.0.0"
+    "wayofthejs": "^3.0.1"
   }
 }

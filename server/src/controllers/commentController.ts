@@ -1,4 +1,4 @@
-import { Controller, Route } from 'wayofnode';
+import { Controller, Route } from 'wayofthenode';
 import prisma from '../utils/connect';
 import * as http from 'http';
 import { AuthMiddleware } from '../middleware/authMiddleware';

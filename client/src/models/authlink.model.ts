@@ -1,4 +1,4 @@
-import { ApiSync, Attributes, Eventing, Model } from 'wayofjs';
+import { ApiSync, Attributes, Eventing, Model } from 'wayofthejs';
 import { base } from '@/props/base.props';
 
 export interface AuthModelProps {

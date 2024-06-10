@@ -1,5 +1,5 @@
 // login.view.ts
-import { html, View } from 'wayofjs';
+import { html, View } from 'wayofthejs';
 import { loginPageStyles } from './login.styles';
 import { LoginModel, LoginAttributes } from '@/models/login.model';
 import { signInWithGoogle } from '@/utils/firebase';  // Import the function

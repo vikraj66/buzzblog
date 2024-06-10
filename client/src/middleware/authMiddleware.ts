@@ -1,5 +1,6 @@
 import { isLoggedIn } from "@/utils/firebase";
-import { Middleware } from "wayofjs/dist/router/Router";
+import { Middleware } from "wayofthejs";
+
 
 export const authMiddleware: Middleware = async (params, next) => {
     // next();
