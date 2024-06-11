@@ -6,11 +6,12 @@ services:
       - '3000:3000'
     depends_on:
       - client
-    environment:
-      - NODE_ENV=production
+    env_file:
+      - ./server/.env
+
   client:
     build: ./client
     ports:
       - '1234:1234'
-    environment:
-      - NODE_ENV=production
+    env_file:
+      - ./client/.env

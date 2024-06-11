@@ -4,7 +4,7 @@ import * as http from 'http';
 import { AuthMiddleware } from '../middleware/authMiddleware';
 import { sessionMiddleware } from '../middleware/sessionMiddleware';
 import { parse } from 'url';
-
+ 
 
 
 @Controller('/posts')
