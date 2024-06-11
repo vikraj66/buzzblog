@@ -1,2 +1,4 @@
-export const BASEURL = 'https://unemployed-charlene-wayofthesword-e8f06d68.koyeb.app/api'
+import dotenv
+dotenv.config()
+export const BASEURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api' : process.env.SERVER_URL
 
