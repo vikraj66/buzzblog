@@ -1,6 +1,6 @@
 import { html, View } from 'wayofthejs';
 import { authlinkStyles } from './authlink.styles';
-import { AuthModel, AuthModelProps } from '@/models/authlink.model';
+import { AuthModel, AuthModelProps } from '../../models/authlink.model';
 
 interface AuthLinksProps {
     id?: number;

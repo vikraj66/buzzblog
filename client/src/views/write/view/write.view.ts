@@ -4,6 +4,7 @@ import { WriteAttributes, WriteModel } from '@/models/write.model';
 import Quill from 'quill';
 import 'quill/dist/quill.bubble.css';
 import { uploadFileToFirebase } from '../../../utils/firebase';
+import { BASEURL } from '@/constants/constant';
 
 interface Category {
     id: string;
@@ -102,7 +103,7 @@ export class WriteView extends View<WriteModel, WriteAttributes> {
 
     async postData(data: object): Promise<void> {
         try {
-            const response = await fetch('http://localhost:3000/posts', {
+            const response = await fetch(`${BASEURL}/posts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,7 +128,7 @@ export class WriteView extends View<WriteModel, WriteAttributes> {
         if (this.categoriesLoaded) return;
         this.categoriesLoaded = true;
         try {
-            const response = await fetch('http://localhost:3000/categories');
+            const response = await fetch(`${BASEURL}/categories`);
             if (response.ok) {
                 this.categories = await response.json();
                 this.render();

@@ -1,6 +1,7 @@
 import { html, View } from 'wayofthejs';
-import { Base } from '@/models/base.model';
+import { Base } from '../../models/base.model';
 import { categoryListStyles } from './categorylist.styles';
+import { BASEURL } from '../../constants/constant';
 
 interface Category {
     id: string;
@@ -19,7 +20,7 @@ export class CategoryListView extends View<Base, {}> {
 
     async fetchCategories(): Promise<void> {
         try {
-            const response = await fetch('http://localhost:3000/categories');
+            const response = await fetch(`${BASEURL}/categories`);
             if (response.ok) {
                 this.categories = await response.json();
                 this.render();

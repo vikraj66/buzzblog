@@ -1,7 +1,7 @@
 import { Model, View } from 'wayofthejs';
 import { footerStyles } from './footer.styles';
-import { Base } from '@/models/base.model';
-import { base } from '@/props/base.props';
+import { Base } from '../../models/base.model';
+import { base } from '../../props/base.props';
 
 export class FooterView extends View<Base, base> {
     constructor(parent: Element, model: Model<base>) {

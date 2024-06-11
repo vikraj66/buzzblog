@@ -1,7 +1,7 @@
 import { html, View } from 'wayofthejs';
-import { Base } from '@/models/base.model';
+import { Base } from '../../models/base.model';
 import { featuredStyles } from './featured.styles';
-import { base } from '@/props/base.props';
+import { base } from '../../props/base.props';
 
 export class FeaturedView extends View<Base, base> {
     styles(): string {

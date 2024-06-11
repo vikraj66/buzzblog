@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 import { jwtDecode } from 'jwt-decode';
+import { BASEURL } from '../constants/constant';
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -23,7 +24,7 @@ export const signInWithGoogle = async () => {
         const result = await signInWithPopup(auth, googleProvider);
         const idToken = await result.user.getIdToken();
 
-        const response = await fetch('http://localhost:3000/api/auth/google-login', {
+        const response = await fetch(`${BASEURL}/api/auth/google-login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -81,7 +82,7 @@ export const logout = async () => {
         await signOut(auth);
         localStorage.removeItem('firebaseUserData');
         localStorage.removeItem('idToken');
-        const response = await fetch('http://localhost:3000/api/auth/logout', {
+        const response = await fetch(`${BASEURL}/api/auth/logout`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

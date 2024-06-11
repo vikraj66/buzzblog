@@ -5,7 +5,7 @@ import { AuthMiddleware } from '../middleware/authMiddleware';
 import { session } from 'passport';
 import { sessionMiddleware } from '../middleware/sessionMiddleware';
 
-@Controller('/categories')
+@Controller('/api/categories')
 export class CategoryController {
   @Route('get', '/')
   async getAllCategories(req: http.IncomingMessage, res: http.ServerResponse) {

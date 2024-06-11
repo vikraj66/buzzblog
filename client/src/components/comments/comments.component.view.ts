@@ -1,6 +1,7 @@
 import { html, View } from 'wayofthejs';
-import { Base } from '@/models/base.model';
+import { Base } from '../../models/base.model';
 import { commentStyles } from './comments.styles';
+import { BASEURL } from '../../constants/constant';
 
 interface CommentsProps {
     id?: number;
@@ -45,7 +46,7 @@ export class CommentsView extends View<Base, CommentsProps> {
 
         if (commentsContainer) {
             try {
-                const response = await fetch(`http://localhost:3000/comments?slug=${this.props.postSlug}`, {
+                const response = await fetch(`${BASEURL}/comments?slug=${this.props.postSlug}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -99,7 +100,7 @@ export class CommentsView extends View<Base, CommentsProps> {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/comments', {
+            const response = await fetch(`${BASEURL}/comments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

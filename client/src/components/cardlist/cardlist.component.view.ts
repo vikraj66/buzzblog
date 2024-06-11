@@ -1,8 +1,9 @@
 import { html, View } from 'wayofthejs';
-import { Base } from '@/models/base.model';
-import { CardView } from '@/components/card/card.component.view';
+import { Base } from '../../models/base.model';
+import { CardView } from '../../components/card/card.component.view';
 import { cardListStyles } from './cardlist.styles';
 import { mockData } from './mockData';
+import { BASEURL } from '../../constants/constant';
 
 interface CardListProps {
     id?: number;
@@ -49,7 +50,7 @@ export class CardListView extends View<Base, CardListProps> {
         const POST_PER_PAGE = 2;
 
         try {
-            const response = await fetch(`http://localhost:3000/posts?page=${page}&cat=${cat || ''}`, {
+            const response = await fetch(`${BASEURL}/posts?page=${page}&cat=${cat || ''}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('idToken')}`
                 }

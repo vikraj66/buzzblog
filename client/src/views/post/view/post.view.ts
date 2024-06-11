@@ -3,6 +3,7 @@ import { Base } from '@/models/base.model';
 import { MenuView } from '@/components/menu/menu.component.view';
 import { CommentsView } from '@/components/comments/comments.component.view';
 import { postStyles } from './post.styles';
+import { BASEURL } from '@/constants/constant';
 
 interface SinglePageProps {
     id?: number;
@@ -22,7 +23,7 @@ export class PostView extends View<Base, SinglePageProps> {
 
     async fetchPostData(slug: string): Promise<void> {
         try {
-            const response = await fetch(`http://localhost:3000/posts/blog?slug=${slug}`);
+            const response = await fetch(`${BASEURL}/posts/blog?slug=${slug}`);
             if (response.ok) {
                 this.postData = await response.json();
                 this.render();

@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .parcel-cache/
-serviceAccountKey.json
+*.private.json
 .env
 test
+*.private.sh

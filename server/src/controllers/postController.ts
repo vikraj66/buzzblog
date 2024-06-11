@@ -7,7 +7,7 @@ import { parse } from 'url';
  
 
 
-@Controller('/posts')
+@Controller('/api/posts')
 export class PostController {
   @Route('get', '/', 'getAllPosts')
   async getAllPosts(req: http.IncomingMessage, res: http.ServerResponse) {

@@ -1,5 +1,5 @@
-import { Base } from '@/models/base.model';
-import { base } from '@/props/base.props';
+import { Base } from '../../models/base.model';
+import { base } from '../../props/base.props';
 import { View } from 'wayofthejs';
 
 interface LayoutCommonProps {

@@ -5,7 +5,7 @@ import { AuthMiddleware } from '../middleware/authMiddleware';
 import { sessionMiddleware } from '../middleware/sessionMiddleware';
 import { parse } from 'url';
 
-@Controller('/comments')
+@Controller('/api/comments')
 export class CommentController {
   @Route('get', '/')
   async getAllComments(req: http.IncomingMessage, res: http.ServerResponse) {
