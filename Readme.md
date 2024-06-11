@@ -23,8 +23,12 @@ BuzzBlog is a powerful blogging platform built with a custom backend framework c
    ```
 
 3. Set up environment variables:
-   - Create a `.env` file in the root directory.
-   - Add the following environment variables:
+   - Copy the `.env.example` file to `.env` in both the client and server directories:
+     ```sh
+     cp client/.env.example client/.env
+     cp server/.env.example server/.env
+     ```
+   - Fill in the required environment variables in the `.env` files:
      ```env
      DATABASE_URL=your_database_url
      SESSION_SECRET=your_session_secret
@@ -39,6 +43,13 @@ BuzzBlog is a powerful blogging platform built with a custom backend framework c
    ```sh
    npm run dev
    ```
+
+6. To use Docker:
+   - Ensure Docker is installed on your machine.
+   - Run the `docker.sh` script:
+     ```sh
+     ./docker.sh
+     ```
 
 ## Usage
 
